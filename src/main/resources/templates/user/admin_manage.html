@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!-- 引入 thymeleaf 命名空间 xmlns:th -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>链知商城【管理控制台】</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/button.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/notice.css"/>
+    <!-- 引入头部公共 css -->
+    <th:block th:replace="header::common_header_css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/user/admin_manage.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/modal_dialog.css"/>
+</head>
+<body>
+    <div th:replace="header::common_header"></div>
+
+    <div id="manage_content">
+        <aside>
+            <ul>
+                <li for="good_add">商品发布</li>
+                <li for="good_audit">商品初审</li>
+                <li for="good_audit2">商品终审</li>
+                <li for="good_list">已发布商品</li>
+                <li for="coupon_add">优惠券发布</li>
+                <li for="coupon_audit">优惠券初审</li>
+                <li for="coupon_audit2">优惠券终审</li>
+                <li for="coupon_list">已发布优惠券</li>
+                <li for="good_logistics">物流管理</li>
+                <li for="operate_log">操作记录</li>
+            </ul>
+        </aside>
+        <section>
+            <div class="content_area">
+                <div class="content_box good_add">
+                    <h3 class="menu_label">商品发布</h3>
+                    <div style="margin-top: 50px;">
+                        <form>
+                            <table>
+                                <tr>
+                                    <td style="padding: 0 10px;">
+                                        <label>商品名称: </label>
+                                        <input type="text" name="good_name" placeholder="请输入商品名称"/><br/><br/>
+                                    </td>
+                                    <td style="padding: 0 10px;">
+                                        <label>商品价格: </label>
+                                        <input type="number" name="good_price" placeholder="请输入商品价格"/><br/><br/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="padding: 0 10px;">
+                                        <label style="vertical-align: top;">商品描述: </label>
+                                        <!-- 解决textarea光标初始位置没有在最左上角的问题 : <textarea></textarea>之间不能有空格 -->
+                                        <textarea rows="8" name="good_desc" placeholder="请输入商品描述"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="padding: 0 10px;">
+                                        <label style="vertical-align: top;">商品图片: </label>
+                                        <div style="display: inline-block;vertical-align: top;">
+                                            <ul class="good_images">
+                                                <input type="file" name="good_image" hidden="hidden" accept=".jpg,.png,.gif" for="0"/><li for="0"></li>
+                                                <input type="file" name="good_image" hidden="hidden" accept=".jpg,.png,.gif" for="1"/><li for="1"></li>
+                                                <input type="file" name="good_image" hidden="hidden" accept=".jpg,.png,.gif" for="2"/><li for="2"></li>
+                                                <input type="file" name="good_image" hidden="hidden" accept=".jpg,.png,.gif" for="3"/><li for="3"></li>
+                                                <input type="file" name="good_image" hidden="hidden" accept=".jpg,.png,.gif" for="4"/><li for="4"></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="text-align: center;padding-top: 20px;"><button class="button enalbe">确认</button></td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+                <div class="content_box good_audit">
+                    <h3 class="menu_label">商品初审</h3>
+                    <div class="list_data"></div>
+                </div>
+                <div class="content_box good_audit2">
+                    <h3 class="menu_label">商品终审</h3>
+                    <div class="list_data"></div>
+                </div>
+                <div class="content_box good_list">
+                    <h3 class="menu_label">已发布商品</h3>
+                    <div class="list_data"></div>
+                </div>
+                <div class="content_box coupon_add">
+                    <h3 class="menu_label">优惠券发布</h3>
+                </div>
+                <div class="content_box coupon_audit">
+                    <h3 class="menu_label">优惠券初审</h3>
+                </div>
+                <div class="content_box coupon_audit2">
+                    <h3 class="menu_label">优惠券终审</h3>
+                </div>
+                <div class="content_box coupon_list">
+                    <h3 class="menu_label">已发布优惠券</h3>
+                </div>
+                <div class="content_box good_logistics">
+                    <h3 class="menu_label">物流管理</h3>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer></footer>
+
+    <!-- 模态对话框 -->
+    <div class="modalDiv">
+        <div class="modalShade hide"></div>
+        <div class="modalDialog hide">
+            <div class="dialogClose">X</div>
+            <div class="dialogHeader">
+                温馨提示
+            </div>
+            <div class="dialogContent"></div>
+        </div>
+    </div>
+
+    <div class="noticeDiv noticeError notice_hide">我是通知信息</div>
+</body>
+<script src="/static/js/jquery-3.1.1.min.js"></script>
+<script src="/static/js/modal_dialog.js"></script>
+<script src="/static/js/notice.js"></script>
+<!-- 引入头部公共 css -->
+<th:block th:replace="header::common_header_js"/>
+<script src="/static/js/user/admin_manage.js"></script>
+</html>

@@ -1,0 +1,33 @@
+/* css 重置 */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 800px;
+    background-color: #f4f4f4;
+}
+
+/* 禁用 button 默认行为 */
+button {
+    /* 自定义边框 */
+    border: 1px solid transparent;
+    /* 消除默认点击蓝色边框效果 */
+    outline: none;
+}
+
+/* 禁用 input 默认行为 */
+input, textarea {
+    border: 1px solid transparent;
+    outline: none;
+}
+
+.copyRight {
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    color: gray;
+    margin: 20px;
+    font-size: 14px;
+}

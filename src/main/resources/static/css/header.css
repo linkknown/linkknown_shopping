@@ -1,0 +1,62 @@
+.nav_theme_default {
+    background-color: orangered;
+    color: white;
+    border: none;
+}
+.nav_theme_white {
+    background-color: white;
+    color: black;
+    border: 1px solid #eeeeee;
+}
+nav {
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    z-index: 9999;
+    top: 0;
+}
+nav section span {
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+.site_label {
+    height: 60px;
+    line-height: 60px;
+    margin-left: 50px;
+    font-size: 26px;
+    font-family: Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
+    cursor: pointer;
+}
+nav aside:first-child {
+    width: 30%;
+}
+nav section {
+    width: 40%;
+}
+nav aside:last-child {
+    width: 30%;
+    display: flex;
+}
+nav aside:last-child button {
+    width: 100px;
+    height: 36px;
+    background-color: orange;
+    border-radius: 20px;
+    line-height: 36px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    margin: 13px 10px 0 150px;
+}
+.header_icon {
+    width: 45px;
+    height: 45px;
+    margin: 8px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}

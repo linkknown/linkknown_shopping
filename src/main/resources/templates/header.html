@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- 引入 thymeleaf 命名空间 xmlns:th -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:fragment="common_header_css">
+    <link rel="stylesheet" href="/static/css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/header.css"/>
+</th:block>
+<body>
+    <nav class="nav_theme_default" th:fragment="common_header">
+        <aside>
+            <h3 class="site_label">链知商城</h3>
+        </aside>
+        <section>
+            <span>新人福利</span>
+            <span>优惠券</span>
+            <span class="gotoOrderList">我的订单</span>
+            <span>我的收藏</span>
+            <span>更多优惠</span>
+            <span>客户端下载</span>
+        </section>
+        <aside>
+            <Button class="gotoCart">查看购物车</Button>
+            <span style="margin-top:12px;cursor: pointer;"><i class="fa fa-bell-o fa-2x" aria-hidden="true" style="transform: scale(0.7, 0.7);"></i></span>
+            <img class="header_icon" src="/static/img/linkknown.jpg">
+        </aside>
+    </nav>
+</body>
+
+<th:block th:fragment="common_header_js">
+    <script src="/static/js/cookie.js"></script>
+    <script src="/static/js/common.js"></script>
+    <script src="/static/js/header.js"></script>
+</th:block>
+</html>

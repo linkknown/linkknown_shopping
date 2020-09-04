@@ -1,0 +1,106 @@
+.content {
+    width: 70%;
+    margin: 80px auto;
+    padding: 20px;
+    background-color: white;
+}
+
+.user_info {
+    padding: 10px 10px;
+}
+.user_info .cart_label {
+    font-weight: bold;
+    font-size: 20px;
+}
+.user_info .address {
+    float: right;
+    font-size: 14px;
+    color: gray;
+}
+
+ul.sep_line li {
+    list-style: none;
+    float: left;
+    width: 25%;
+    height: 4px;
+}
+ul.sep_line li:nth-child(1) {
+    background-color: red;
+}
+ul.sep_line li:nth-child(2) {
+    background-color: green;
+}
+ul.sep_line li:nth-child(3) {
+    background-color: blue;
+}
+ul.sep_line li:nth-child(4) {
+    background-color: orange;
+}
+
+.user_info .address .label {
+    background-color: #ffdfdf;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.good_area ul li {
+    list-style: none;
+    border-bottom: 1px solid #eeeeee;
+    padding: 20px 50px;
+}
+.good_area ul li > span {
+    display: inline-block;
+}
+.good_area ul li:first-child {
+    background-color: #ffe1ad;
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+}
+.good_area ul li > span:nth-child(1) {
+    width: 10%;
+}
+.good_area ul li > span:nth-child(2) {
+    width: 40%;
+}
+.good_area ul li > span:nth-child(3) {
+    width: 10%;
+}
+.good_area ul li > span:nth-child(4) {
+    width: 10%;
+}
+.good_area ul li > span:nth-child(5) {
+    width: 28%;
+}
+.good_area ul li .buy_number_box {
+    float: right;
+    color: orangered;
+}
+.good_area ul li .operate_btn {
+    font-size: 14px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.good_area ul li .operate_btn:hover {
+    color: red;
+}
+
+.operate_area {
+    padding: 10px;
+    height: 20px;
+}
+.operate_area > div {
+    float: left;
+    width: 50%;
+}
+.operate_area > div:nth-child(1) {
+    padding-left: 40px;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+.operate_area button {
+    float: right;
+    margin-right: 50px;
+}

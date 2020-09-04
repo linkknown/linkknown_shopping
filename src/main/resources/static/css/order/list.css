@@ -1,0 +1,146 @@
+
+.content {
+    width: 70%;
+    margin: 80px auto;
+    padding: 20px;
+    background-color: white;
+}
+
+.classify > span {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    cursor: pointer;
+}
+.classify > span.current {
+    font-weight: bold;
+    color: red;
+}
+
+ul.sep_line li {
+    list-style: none;
+    float: left;
+    width: 25%;
+    height: 4px;
+}
+ul.sep_line li:nth-child(1) {
+    background-color: red;
+}
+ul.sep_line li:nth-child(2) {
+    background-color: green;
+}
+ul.sep_line li:nth-child(3) {
+    background-color: blue;
+}
+ul.sep_line li:nth-child(4) {
+    background-color: orange;
+}
+
+.order_list > ul > li {
+    list-style: none;
+    margin: 20px 0;
+    border: 1px solid #cecece;
+}
+.order_list > ul > li .order_id_box {
+    background-color: #ffe9c8;
+    height: 30px;
+    line-height: 30px;
+    padding: 5px 20px;
+}
+.order_list > ul > li .order_id_box .order_id {
+    color: darkorange;
+}
+.order_list > ul > li .order_info {
+    display: table;
+    width: 100%;
+}
+.order_list > ul > li .order_info .column {
+    width:50%;
+    display: table-cell;
+    vertical-align: top;
+}
+.order_list > ul > li .order_info .column:not(:last-child) {
+    border-right: 1px solid #cecece;
+}
+.order_list > ul > li .order_info .column:nth-child(1) {
+    width: 50%;
+}
+.order_list > ul > li .order_info .column:nth-child(2) {
+    width: 16%;
+    padding: 20px;
+    font-size: 14px;
+    color: gray;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.order_list > ul > li .order_info .column:nth-child(3) {
+    width: 16%;
+    padding: 20px;
+    font-size: 14px;
+    color: gray;
+}
+.order_list > ul > li .order_info .column:nth-child(4) {
+    width: 18%;
+    padding: 20px;
+    font-size: 14px;
+    color: gray;
+}
+.good_item {
+    padding: 10px 30px;
+}
+.good_item img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.good_item .good_info_box {
+    flex-grow: 1;
+    color: gray;
+    font-size: 14px;
+}
+.good_item .good_price_box {
+    margin: 15px 0;
+}
+.buy_number_box {
+    color: #e20202;
+}
+.after_service {
+    cursor: pointer;
+}
+.after_service:hover {
+    color: #e20202;
+}
+
+.good_item:not(:last-child) {
+    border-bottom: 1px solid #cecece;
+}
+
+.waitPay {
+    color: red;
+    font-size: 16px;
+    margin-left: 10px;
+}
+.waitReceive {
+    color: blue;
+    font-size: 16px;
+    margin-left: 10px;
+}
+.waitComment {
+    color: green;
+    font-size: 16px;
+    margin-left: 10px;
+}
+.cancelled {
+    color: gray;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.payCountDownTime {
+    color: red;
+    font-size: 16px;
+    margin-top: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

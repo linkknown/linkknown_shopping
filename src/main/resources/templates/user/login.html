@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/notice.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/user/login.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/font-awesome-4.7.0/css/font-awesome.min.css"/>
+</head>
+<body>
+    <nav>
+       <span class="advise">意见/吐槽</span>
+    </nav>
+    <section>
+        <div class="login_bg">
+            <div class="login_area">
+                <div class="login_header">
+                    <div><h3>密码登录</h3></div>
+                    <div class="gotoIndex"><h3>访问首页</h3></div>
+                </div>
+                <div class="login_content">
+                    <input class="focus" name="username" placeholder="手机 / 邮箱..." type="text" required/>
+                    <span class="checkerror checkerror_username"></span>
+                    <input class="focus" name="passwd" placeholder="密码..." type="password" autocomplete="new-password" required/>
+                    <span class="checkerror checkerror_passwd"></span>
+                    <span class="forget_passwd">忘记密码</span>
+                    <div style="clear: both;"></div>
+                    <input class="login_btn" type="submit" value="登    录">
+                </div>
+                <div class="login_footer">
+                    <div><i class="fa fa-github fa-2x" aria-hidden="true" style="transform: scale(0.7, 0.7);" title="github 账号登录"></i></div>
+                    <div class="gotoRegist">立即注册</div>
+                </div>
+            </div>
+
+            <div class="regist_area" style="display: none;">
+                <div class="regist_header">
+                    <div><h3>账号注册</h3></div>
+                    <div class="gotoIndex"><h3>访问首页</h3></div>
+                </div>
+                <div class="regist_content">
+                    <input class="focus" name="username" placeholder="手机 / 邮箱..." type="text" required/>
+                    <span class="checkerror checkerror_username"></span>
+                    <input class="focus" name="passwd" placeholder="密码..." type="password" autocomplete="new-password" required/>
+                    <span class="checkerror checkerror_passwd"></span>
+                    <div class="verify_code_area">
+                        <input class="focus" name="verify_code" placeholder="验证码..." type="text" required/>
+                        <a href="javascript:getVerifyCode()">
+                            <img class="verify_code_img" title="点击刷新验证码" src="/user/get_verify_code"/>
+                        </a>
+                    </div>
+                    <span class="checkerror checkerror_verify_code"></span>
+                    <div style="clear: both;"></div>
+                    <input class="regist_btn" type="submit" value="注    册">
+                </div>
+                <div class="regist_footer">
+                    <div><i class="fa fa-github fa-2x" aria-hidden="true" style="transform: scale(0.7, 0.7);" title="github 账号登录"></i></div>
+                    <div class="gotoLogin">前去登录</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="copyRight">Copyright © 2019-2020 LinkKnown 版权所有</div>
+    </footer>
+
+    <div class="noticeDiv noticeError notice_hide">我是通知信息</div>
+</body>
+<script src="/static/js/cookie.js"></script>
+<script src="/static/js/common.js"></script>
+<script src="/static/js/notice.js"></script>
+<script src="/static/js/jquery-3.1.1.min.js"></script>
+<script src="/static/js/user/login.js"></script>
+</html>

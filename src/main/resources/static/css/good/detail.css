@@ -1,0 +1,153 @@
+.good_box {
+    display: flex;
+    margin-top: 80px;
+}
+.good_box .left {
+    width: 70%;
+    min-height: 400px;
+    margin: 16px 20px 20px 200px;
+    background-color: white;
+}
+.good_box .right {
+    width: 30%;
+    min-height: 400px;
+}
+
+.recently_view_title {
+    font-size: 12px;
+    color: gray;
+    text-align: center;
+    width: 180px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+ul.recently_view {
+    list-style: none;
+}
+ul.recently_view li {
+    width: 160px;
+    height: 140px;
+    margin: 0 10px 10px 10px;
+    padding: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+ul.recently_view li img {
+    width: 100%;
+    height: 120px;
+}
+ul.recently_view li .good_price {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    background-color: #6f6f6f;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+ul.recently_view li .good_name {
+    color: gray;
+    font-size: 14px;
+    text-align: center;
+}
+
+.good_main_info {
+    display: flex;
+}
+.good_main_info > div:nth-child(1) {
+    width: 380px;
+}
+.good_main_info > div:nth-child(1) .good_image {
+    width: 360px;
+    height: 360px;
+    margin: 10px;
+    border: 1px solid #eeeeee;
+}
+.good_main_info > div:nth-child(1) .good_image img {
+    width: 100%;
+    height: 100%;
+}
+
+.good_main_info > div:nth-child(1) .good_images {
+    width: 360px;
+    height: 60px;
+}
+
+.good_main_info > div:nth-child(1) .good_images ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+.good_main_info > div:nth-child(1) .good_images ul li {
+    width: 55px;
+    height: 55px;
+    margin: 0 5px;
+    transform: translateX(10px);
+}
+.good_main_info > div:nth-child(1) .good_images ul li:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0 1px #7f7f7f;
+}
+.good_main_info > div:nth-child(1) .good_images ul li img {
+    width: 100%;
+    height: 100%;
+}
+
+.good_main_info > div:nth-child(2) {
+    width: 100%;
+}
+
+.good_main_info > div:nth-child(2) .buy_amount {
+    margin: 40px 0;
+}
+
+.good_main_info > div:nth-child(2) .buy_amount input {
+    border: 1px solid #828282;
+    width: 40px;
+    height: 20px;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.good_main_info > div:nth-child(2) .buy_amount .buy_amount_operate {
+    display: inline-block;
+   vertical-align: top;
+}
+.good_main_info > div:nth-child(2) .buy_amount .operate_add,.operate_sub {
+    cursor: pointer;
+    border: 1px solid #828282;
+    height: 12px;
+    width: 18px;
+    display: block;
+    text-align: center;
+    color: #828282;
+    font-size: 8px;
+    line-height: 12px;
+}
+.good_main_info > div:nth-child(2) .buy_amount .operate_add {
+    margin-bottom: 4px;
+}
+.good_main_info > div:nth-child(2) .good_name {
+    margin: 10px 0;
+    color: #db2c2c;
+}
+.good_main_info > div:nth-child(2) .good_desc {
+    margin: 10px 0;
+    color: gray;
+}
+.good_main_info > div:nth-child(2) .address {
+    float: right;
+    color: green;
+    padding: 2px 10px;
+}
+.good_main_info > div:nth-child(2) .button_area {
+    padding: 10px;
+    text-align: right;
+}
+
+.shop_info {
+    background-image: linear-gradient(to right, orange, #ffc560);
+    padding: 10px 20px;
+    line-height: 35px;
+    margin-bottom: 10px;
+}

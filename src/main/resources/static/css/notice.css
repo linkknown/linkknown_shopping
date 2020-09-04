@@ -1,0 +1,27 @@
+.noticeDiv {
+    position: fixed;
+    margin:0 auto;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border: 1px solid #eeeeee;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.noticeSuccess {
+    background-color: #eeffee;
+    border: #9cff9c;
+    color: green;
+}
+.noticeError {
+    background-color: #ffe8e8;
+    border: #ff7b7b;
+    color: red;
+}
+
+.notice_hide {
+    display: none;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- 引入 thymeleaf 命名空间 xmlns:th -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!-- 访问图片出现 403(防止盗链) 的解决办法 -->
+    <meta name="referrer" content="no-referrer" />
+    <title>我的购物车</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/button.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/notice.css"/>
+    <!-- 引入头部公共 css -->
+    <th:block th:replace="header::common_header_css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/cart/detail.css"/>
+</head>
+<body>
+    <div th:replace="header::common_header"></div>
+
+    <div class="content">
+        <div class="user_info">
+            <span class="cart_label">我的购物车</span>
+            <span class="address">
+                收货地址：<span class="label">安徽省六安市舒城县柏林乡秦家桥镇</span>
+            </span>
+        </div>
+        <!-- 分割线 -->
+        <ul class="sep_line">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="good_area">
+            <ul>
+                <li>
+                    <span><input type="checkbox" class="selectAll"/>&nbsp;&nbsp;全选</span>
+                    <span>商品信息</span>
+                    <span>商品单价</span>
+                    <span>商品总价</span>
+                    <span>操作</span>
+                </li>
+                <li hidden>
+                    <span><input type="checkbox"/></span>
+                    <span style="vertical-align: top;">
+                        <img class="good_image" src="/static/img/linkknown.jpg" style="width: 100px;height: 100px;margin: 0 10px;cursor: pointer;"/>
+                        <div style="display: inline-block;vertical-align: top;">
+                            <div>
+                                <span class="good_name">商品名称</span>
+                                <span class="buy_number_box">X&nbsp;<span class="buy_number">10</span></span>
+                            </div>
+                            <div><span>8GB+256GB、蓝色</span></div>
+                        </div>
+                    </span>
+                    <span class="good_price">¥ 10.00</span>
+                    <span class="good_sum_price">¥ 20.00</span>
+                    <span>
+                        <span class="operate_btn remove">移除商品</span>
+                        <span class="operate_btn favorite">收藏该商品</span>
+                        <span class="operate_btn attention">降价通知</span>
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div class="operate_area">
+            <div>
+                <input type="checkbox" class="selectAll"/>&nbsp;&nbsp;全选
+            </div>
+            <div>
+                <button class="button_submit button_theme_red button_disable">去结算</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="noticeDiv noticeError notice_hide">我是通知信息</div>
+</body>
+<script src="/static/js/jquery-3.1.1.min.js"></script>
+<script src="/static/js/common.js"></script>
+<script src="/static/js/notice.js"></script>
+<!-- 引入头部公共 css -->
+<th:block th:replace="header::common_header_js"/>
+<script src="/static/js/cart/detail.js"></script>
+</html>

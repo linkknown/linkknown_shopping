@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- 引入 thymeleaf 命名空间 xmlns:th -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!-- 访问图片出现 403(防止盗链) 的解决办法 -->
+    <meta name="referrer" content="no-referrer" />
+    <title>我的订单页面</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/notice.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/button.css"/>
+    <!-- 引入头部公共 css -->
+    <th:block th:replace="header::common_header_css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/order/list.css"/>
+</head>
+<body>
+    <div th:replace="header::common_header"></div>
+
+    <div class="content">
+        <div class="classify">
+            <span class="classify_all current" order_status="0">全部</span>
+            <span class="classify_waitPay" order_status="1">待付款</span>
+            <span class="classify_waitReceive" order_status="2">待收货</span>
+            <span class="classify_waitComment" order_status="3">待评价</span>
+            <span class="classify_cancelled" order_status="4">已取消</span>
+        </div>
+
+        <!-- 分割线 -->
+        <ul class="sep_line">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+        <div class="order_list">
+            <ul>
+                <li hidden>
+                    <div class="order_id_box">订单编号: <span class="order_id">2020100112120041</span></div>
+                    <div class="order_info">
+                        <div class="column">
+                            <div class="good_item" hidden>
+                                <img class="good_image" src="/static/img/linkknown.jpg">
+                                <div class="good_info_box">
+                                    <div style="display: flex;width: 100%;">
+                                        <div class="good_name" style="width: 70%;">商品名称</div>
+                                        <div class="buy_number_box" style="width: 10%;">X<span class="buy_number">10</span></div>
+                                        <div class="after_service" style="width: 20%;">申请售后</div>
+                                    </div>
+
+                                    <div class="good_price_box">
+                                        <span class="good_price">单价：¥ 10.00</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <span class="good_sum_price">总价：¥ 20.00</span>
+                                    </div>
+                                </div>
+                                <div style="clear: both;"></div>
+                            </div>
+                        </div>
+                        <div class="column">收货人：<span class="user_name">张三</span></div>
+                        <div class="column">订单总金额: <span class="order_sum_price">¥ 100.00</span></div>
+                        <div class="column">
+                            订单状态: <span class="order_status">交易完成</span>
+                            <div class="payCountDownTime"></div>
+                            <div class="payOperate" hidden>
+                                <div class="button_refuse" style="margin: 10px 0;">取消订单</div>
+                                <div class="button_submit button_theme_green" style="margin: 10px 0;">前去支付</div>
+                            </div>
+                            <div class="commentOperate" hidden>
+                                <div class="button_submit"  style="margin: 10px 0;">评价</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear: both;"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+<script src="/static/js/jquery-3.1.1.min.js"></script>
+<script src="/static/js/notice.js"></script>
+<!-- 引入头部公共 css -->
+<th:block th:replace="header::common_header_js"/>
+<script src="/static/js/order/list.js"></script>
+</html>

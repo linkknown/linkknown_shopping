@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- 引入 thymeleaf 命名空间 xmlns:th -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!-- 访问图片出现 403(防止盗链) 的解决办法 -->
+    <meta name="referrer" content="no-referrer" />
+    <title>立即支付</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/notice.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/button.css"/>
+    <!-- 引入头部公共 css -->
+    <th:block th:replace="header::common_header_css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/order/pay.css"/>
+</head>
+<body>
+    <div th:replace="header::common_header"></div>
+
+    <div class="content">
+        <h1>订单支付页面...</h1>
+    </div>
+
+</body>
+<script src="/static/js/jquery-3.1.1.min.js"></script>
+<script src="/static/js/notice.js"></script>
+<!-- 引入头部公共 css -->
+<th:block th:replace="header::common_header_js"/>
+<script src="/static/js/order/pay.js"></script>
+</html>

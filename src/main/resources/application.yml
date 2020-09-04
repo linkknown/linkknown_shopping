@@ -1,0 +1,19 @@
+server:
+  port: 9001
+
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/linkknown_shooping?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  thymeleaf:
+    prefix:
+      classpath: /templates
+    cache: false
+  mvc:
+    static-path-pattern: /static/**
+
+# 配置 pagehelper 方言为 mysql
+pagehelper:
+  helper-dialect: mysql

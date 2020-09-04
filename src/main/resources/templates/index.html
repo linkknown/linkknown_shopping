@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!-- 引入 thymeleaf 命名空间 xmlns:th -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!-- 访问图片出现 403(防止盗链) 的解决办法 -->
+    <meta name="referrer" content="no-referrer" />
+    <title>链知商城</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/common.css"/>
+<!--    <link rel="stylesheet" href="/static/css/font-awesome-4.7.0/css/font-awesome.min.css">  -->
+    <!-- 引入头部公共 css -->
+    <th:block th:replace="header::common_header_css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/index.css"/>
+</head>
+<body>
+<!--    <nav class="nav_theme_default">-->
+<!--        <aside>-->
+<!--            <h3 class="site_label">链知商城</h3>-->
+<!--        </aside>-->
+<!--        <section>-->
+<!--            <span>新人福利</span>-->
+<!--            <span>优惠券</span>-->
+<!--            <span>我的订单</span>-->
+<!--            <span>我的收藏</span>-->
+<!--            <span>更多优惠</span>-->
+<!--            <span>客户端下载</span>-->
+<!--        </section>-->
+<!--        <aside>-->
+<!--            <Button class="gotoCart">查看购物车</Button>-->
+<!--            <span style="margin-top:12px;cursor: pointer;"><i class="fa fa-bell-o fa-2x" aria-hidden="true" style="transform: scale(0.7, 0.7);"></i></span>-->
+<!--            <img class="header_icon" src="/static/img/linkknown.jpg">-->
+<!--        </aside>-->
+<!--    </nav>-->
+<!-- 提取到公共头部 -->
+    <div th:replace="header::common_header"></div>
+
+    <div id="search_box">
+        <div id="search_div">
+            <div class="hot_search" style="margin-top: 150px;text-align: center;">
+                <ul>
+                    <li>测试</li>
+                    <li>测试</li>
+                    <li>测试</li>
+                    <li>测试</li>
+                    <li>测试</li>
+                </ul>
+            </div>
+            <div style="text-align: center;font-size: 0;">
+                <input type="text" placeholder="请输入商品名称"/>
+                <button>搜&nbsp;&nbsp;&nbsp;索</button>
+            </div>
+        </div>
+    </div>
+
+    <div style="display: flex;">
+        <div class="good_list" style="width: 80%;">
+            <div>
+                <h3 class="good_type_label">热门商品</h3>
+                <ul class="good_type_hot">
+                    <!-- 第一个节点作为模板 -->
+                    <li style="display: none;">
+                        <img class="good_image" src="/static/img/linkknown.jpg" width="100%;" height="140px;"/>
+                        <div class="good_info">
+                            <span class="good_id" hidden></span>
+                            <div class="good_name">这块是商品名称</div>
+                            <div>
+                                <span class="good_price">¥ 10.00</span>
+                                <span class="good_label">包邮</span>
+                            </div>
+                            <div style="margin: 5px 0;">
+                                <span>xxx官方旗舰店</span>
+                                <span class="buy_number_box"><span class="buy_number">100</span>人购买</span>
+                            </div>
+                            <div class="good_desc">这块是商品描述</div>
+                        </div>
+                        <div class="good_hidden">
+                            <div class="good_desc_hidden">这块是隐藏的商品描述</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="good_type_label">限时抢购</h3>
+                <ul class="good_type_xsg">
+                    <li>我是限时抢购商品</li>
+                    <li>我是限时抢购商品</li>
+                    <li>我是限时抢购商品</li>
+                    <li>我是限时抢购商品</li>
+                    <li>我是限时抢购商品</li>
+                    <li>我是限时抢购商品</li>
+                    <li>我是限时抢购商品</li>
+                    <li>我是限时抢购商品</li>
+                    <li>我是限时抢购商品</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="good_type_label">拼团商品</h3>
+                <ul class="good_type_pt">
+                    <li>我是拼团商品</li>
+                    <li>我是拼团商品</li>
+                    <li>我是拼团商品</li>
+                    <li>我是拼团商品</li>
+                    <li>我是拼团商品</li>
+                    <li>我是拼团商品</li>
+                    <li>我是拼团商品</li>
+                    <li>我是拼团商品</li>
+                    <li>我是拼团商品</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="aside" style="width: 20%;">
+            <ul>
+                <li>优惠券</li>
+                <li>优惠券</li>
+                <li>优惠券</li>
+                <li>优惠券</li>
+                <li>优惠券</li>
+                <li>优惠券</li>
+                <li>优惠券</li>
+                <li>优惠券</li>
+                <li>优惠券</li>
+                <li>优惠券</li>
+                <li>优惠券</li>
+                <li>优惠券</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="quick_login" style="display: none;">
+        <div class="left">
+            <img src="/static/img/linkknown.jpg"/>
+            <span>在线学习不用愁，用链知课堂</span>
+        </div>
+        <div class="center">
+            <input type="text" name="userName" placeholder="请输入手机号/邮箱"/>
+            <input type="text" name="password" placeholder="请输入密码"/>
+            <button>快速注册</button>
+        </div>
+        <div class="right">
+            <!-- 二维码生成地址：https://www.liantu.com/ -->
+            <img class="scanner" src="/static/img/linkknown_site.png">
+            <span class="sanner_tip">扫描立即下载 APP</span>
+            <img class="close" src="/static/img/close.png">
+        </div>
+    </div>
+
+</body>
+<script src="/static/js/jquery-3.1.1.min.js"></script>
+<!--<script src="/static/js/cookie.js"></script>-->
+<!--<script src="/static/js/common.js"></script>-->
+<!-- 引入头部公共 css -->
+<th:block th:replace="header::common_header_js"/>
+<script src="/static/js/index.js"></script>
+</html>

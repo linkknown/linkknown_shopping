@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- 引入 thymeleaf 命名空间 xmlns:th -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!-- 访问图片出现 403(防止盗链) 的解决办法 -->
+    <meta name="referrer" content="no-referrer" />
+    <title>商品详情页</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/notice.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/button.css"/>
+    <!-- 引入头部公共 css -->
+    <th:block th:replace="header::common_header_css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/good/detail.css"/>
+</head>
+<body>
+    <!--获取后台跳转带入值 -->
+    <span id="good_id" hidden th:text="${good_id}"></span>
+
+    <div th:replace="header::common_header"></div>
+
+    <div class="good_box">
+        <div class="left">
+            <div class="shop_info">
+                <span class="more_classify">更多商品分类: 以下拉列表形式展开</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="gotoIndex">首页</span>
+            </div>
+
+            <!-- 商品主体信息区域 -->
+            <div class="good_main_info" style="display: none;">
+                <div>
+                    <div class="good_image">
+                        <img src="/static/img/linkknown.jpg"/>
+                    </div>
+                    <div class="good_images">
+                        <ul>
+                            <li><img src="/static/img/linkknown.jpg"/></li>
+                            <li><img src="/static/img/linkknown.jpg"/></li>
+                            <li><img src="/static/img/linkknown.jpg"/></li>
+                            <li><img src="/static/img/linkknown.jpg"/></li>
+                            <li><img src="/static/img/linkknown.jpg"/></li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="padding: 10px;">
+                    <div class="good_name">商品名称</div>
+                    <div class="good_price">¥ 88.00</div>
+                    <div class="good_desc">这里是商品描述</div>
+                    <div>运费：免运费    <button class="address">收货地址</button></div>
+                    <div class="buy_amount">
+                        <span>数量：</span>
+                        <span>
+                            <input type="text" name="buy_amount" value="1"/>
+                            <span class="buy_amount_operate">
+                                <span class="operate_add">+</span>
+                                <span class="operate_sub">-</span>
+                            </span>
+                            <span>&nbsp;件</span>
+                        </span>
+                    </div>
+                    <div class="button_area">
+                        <button class="button_submit">加入购物车</button>
+                        <button class="button_submit button_theme_red">立即购买</button>
+                    </div>
+                    <div>产品特色 ：七天包换</div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div>
+                <div class="recently_view_title">-----最近浏览-----</div>
+                <ul class="recently_view"></ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="noticeDiv noticeError notice_hide">我是通知信息</div>
+</body>
+<script src="/static/js/jquery-3.1.1.min.js"></script>
+<script src="/static/js/notice.js"></script>
+<!-- 引入头部公共 css -->
+<th:block th:replace="header::common_header_js"/>
+<script src="/static/js/good/detail.js"></script>
+</html>

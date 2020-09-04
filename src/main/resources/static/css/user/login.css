@@ -1,0 +1,171 @@
+body {
+    min-height: 450px;
+    background-color: #f4f4f4;
+}
+
+nav {
+    position: relative;
+    height: 40px;
+    color: white;
+    padding: 10px;
+}
+
+nav .advise {
+    position: absolute;
+    right: 100px;
+    color: orange;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 40px;
+    height: 40px;
+}
+.login_bg {
+    height: 550px;
+    width: 100%;
+    background: url(/static/img/login_bg.jpg) 0 0 no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+.login_area {
+    position: absolute;
+    right: 200px;
+    top: 100px;
+    width: 320px;
+    height: 300px;
+    background-color: white;
+}
+.regist_area {
+    position: absolute;
+    right: 200px;
+    top: 100px;
+    width: 320px;
+    height: 370px;
+    background-color: white;
+}
+.login_header,.regist_header {
+    height: 40px;
+    padding: 0 20px;
+}
+.login_header > div,.regist_header div {
+    width: 50%;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+}
+.login_header > div:nth-child(1),.regist_header > div:nth-child(1) {
+    text-align: left;
+}
+.login_header > div:nth-child(2),.regist_header > div:nth-child(2) {
+    text-align: right;
+    color: #2c5bff;
+}
+.login_header .gotoIndex,.regist_header .gotoIndex {
+    cursor: pointer;
+}
+.login_content {
+    height: 220px;
+}
+.regist_content {
+    height: 290px;
+}
+.login_content:before,.regist_content:before {
+    clear: left;
+}
+.login_content .forget_passwd {
+    text-align: right;
+    color: gray;
+    font-size: 12px;
+    cursor: pointer;
+    margin-right: 20px;
+    float: right;
+}
+.login_content .forget_passwd:hover {
+    color: #E4393C;
+    text-decoration: underline;
+}
+.focus:focus {
+    background-color: #ffffff;
+    outline: 2px solid #2c5bff;
+}
+.login_content input[name='username'],input[name='passwd'],.regist_content input[name='username'],input[name='passwd'],input[name='verify_code'] {
+    width: 90%;
+    height: 40px;
+    margin: 15px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border: 1px solid #c6c6c6;
+}
+.checkerror {
+    font-size: 12px;
+    color: red;
+    float: left;
+    margin-left: 15px;
+    height: 10px;
+    line-height: 10px;
+}
+.regist_content input[name='verify_code'] {
+    width: 50%;
+    vertical-align: middle;
+}
+.regist_content .verify_code_area {
+    display: inline-block;
+}
+.regist_content .verify_code_img {
+    cursor:pointer;
+    width: 100px;
+    height: 38px;
+    margin: 5px 0 0 5px;
+    border-radius: 3px;
+    vertical-align: middle;
+    transform: translateY(-5px);
+}
+.login_content .login_btn,.regist_content .regist_btn {
+    width: 90%;
+    height: 40px;
+    display: block;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    color: #fff;
+    background: #3f89ec;
+    border: 0;
+    text-align: center;
+
+    margin: 8px 0 0 15px ;
+}
+
+.login_footer,.regist_footer {
+    height: 40px;
+}
+.login_footer > div,.regist_footer div {
+    width: 50%;
+    height: 40px;
+    float: left;
+}
+.login_footer > div:nth-child(1),.regist_footer > div:nth-child(1) {
+    padding-left: 20px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.login_footer > div:nth-child(2),.regist_footer > div:nth-child(2) {
+    text-align: right;
+    padding-right: 20px;
+    cursor: pointer;
+    box-sizing: border-box;
+    color: #2c5bff;
+    font-size: 14px;
+    line-height: 40px;
+}
+
+.rotate_anim {
+    animation: rotate_animation 0.5s linear;
+}
+@keyframes rotate_animation {
+    0% {
+        transform: rotateY(-90deg);
+    }
+    100% {
+        transform: rotateY(0);
+    }
+}
